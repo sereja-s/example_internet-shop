@@ -1,0 +1,19 @@
+1- из сборки Gulp в наш проект копируем:
+	- папку gulp
+	- папку src
+	- gulpFile.js
+	- package.json
+2- открываем папку с проектом в терминале VSCode
+3- > npm i (установятся все пакеты из файла package.json)
+4- Ошибка Pyton
+		Решение:
+		- запустить терминал PowerShell от имени администрации
+		- выполнить следующие команды: 
+				* перейти в папку своего проекта используя команду cd
+				* npm install --global windows-build-tools					
+	если покажет: Ошибка node-sass
+		Решение:
+			npm rebuild node-sass
+			и/или
+			npm install sass gulp-sass --save-dev
+5- запускаем сборку в режиме разработчика командой в терминале > npm run dev
