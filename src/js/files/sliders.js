@@ -38,13 +38,16 @@ function bildSliders() {
 		});
 	}
 }
-// Инициализация слайдеров
+
+// ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРОВ
+
 function initSliders() {
 	// Добавление классов слайдера
 	// при необходимости отключить
 	bildSliders();
 
-	// Перечень слайдеров
+	// ПЕРЧЕНЬ СЛАЙДЕРОВ:
+
 	if (document.querySelector('.main-block__slider')) {
 		new Swiper('.main-block__slider', {
 			// Подключаем модули слайдера
@@ -61,7 +64,7 @@ function initSliders() {
 			spaceBetween: 50,
 			parallax: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 3000,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			loop: true,
@@ -69,7 +72,7 @@ function initSliders() {
 			//lazy: true,
 			// Dotts
 			pagination: {
-				el: '.controll-main-block__dotts',
+				el: '.controll-main-block__dotts', // выводим точки (полоски)
 				clickable: true,
 			},
 			// Arrows
@@ -99,11 +102,15 @@ function initSliders() {
 			},
 			*/
 			on: {
+				// покажем общее число слайдов
 				init: function (swiper) {
 					const allSlides = document.querySelector('.fraction-controll__all');
+					// исключим все дублирующие объекты (которые возникают если включено свойство слайдера: loop: true)
+					// получаем все объекты класса slide-main-block, у которых нет класса swiper-slide-duplicate
 					const allSlidesItems = document.querySelectorAll('.slide-main-block:not(.swiper-slide-duplicate)');
 					allSlides.innerHTML = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
 				},
+				// покажем номер текущего слайда
 				slideChange: function (swiper) {
 					const currentSlide = document.querySelector('.fraction-controll__current');
 					currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
@@ -128,7 +135,7 @@ function initSliders() {
 			spaceBetween: 30,
 			parallax: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 3000,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -151,7 +158,7 @@ function initSliders() {
 					slidesPerView: 1,
 					spaceBetween: 10,
 				},
-				768: {
+				640: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
@@ -159,7 +166,7 @@ function initSliders() {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1370: {
+				1320: {
 					slidesPerView: 4,
 					spaceBetween: 30,
 				},
@@ -188,7 +195,7 @@ function initSliders() {
 			spaceBetween: 30,
 			parallax: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 3000,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -211,7 +218,7 @@ function initSliders() {
 					slidesPerView: 1,
 					spaceBetween: 10,
 				},
-				768: {
+				640: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
@@ -219,7 +226,7 @@ function initSliders() {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				1330: {
+				1320: {
 					slidesPerView: 3,
 					spaceBetween: 30,
 				},
@@ -244,7 +251,7 @@ function initSliders() {
 			spaceBetween: 16,
 			parallax: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 3000,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,

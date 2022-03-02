@@ -1,0 +1,54 @@
+1- Специальную структукру слайдера пишем в файле-html (пример): 
+
+<!-- Слайдер (в шаблоне обзязательное слово: swiper добавится автоматически)-->
+<div class="main-block__slider">
+
+	<!-- главный блок слайдера (в шаблоне обзязательное сочетание слов: swiper-wrapper добавится автоматически)--> -->
+	<div class="main-block__swiper">
+
+		<!-- оболочка для контента слайдера (СЛАЙД № 1) -->
+		<div class="main-block__slide slide-main-block">
+
+			<div class="slide-main-block__content">
+				<h2 data-swiper-parallax="-100" class="slide-main-block__title">Интернет магазин
+					сертифицированных</h2>
+				<div data-swiper-parallax="-150" class="slide-main-block__sub-title">златоустовских ножей
+				</div>
+				<div data-swiper-parallax="-200" class="slide-main-block__text">
+					Добро пожаловать на официальный сайт «ЗЛАТМАКС»! В нашем магазине представлен наиболее
+					широкий выбор Златоустовских ножей от Златоустовских Оружейных Фабрик и компаний, мы
+					являемся официальными поставщиками.
+				</div>
+			</div>
+			<a href="" data-swiper-parallax="-250" class="slide-main-block__button button">Подробнее</a>
+			
+		</div>
+
+		<!-- оболочка для контента слайдера (СЛАЙД № 2) -->
+		<div class="main-block__slide slide-main-block">
+		</div>
+
+		<!-- оболочка для контента слайдера (СЛАЙД № 3) -->
+		<div class="main-block__slide slide-main-block">
+		</div>
+	</div>
+	<!-- Элемены управления слайдером -->
+	<div class="main-block__controll controll-main-block">
+		<!-- точки (полоски) -->
+		<div class="controll-main-block__dotts"></div>
+		<!-- фракции (счётчик слайдов с указанием текущего, пагинация) -->
+		<div class="controll-main-block__fraction fraction-controll">
+			<span class="fraction-controll__current">0</span> / <span
+				class="fraction-controll__all">0</span>
+		</div>
+	</div>
+</div>
+
+
+2- В файле src > js > files > sliders.js подключим весь функционал (в т.ч. используемых модулей), инициализируем слайдер Swiper и настроим его 
+3- В файле src > js > app подключим (раскомментируем): import "./files/sliders.js";	
+4- Настройка параллакс-эффекта: 
+	- в файле src > js > files > sliders.js в настройках слайдера прописываем свойство: parallax: true, и модуль Parallax (модули указаны в документации на сайте Swiper)
+	- файле-html для элементов контентного блока слайдера добавляем: data-swiper-parallax="-100" и т.д.
+5- для навешивания таймера подключим модуль Autoplay (В файле src > js > files > sliders.js) в строчке: import Swiper и в function initSliders() эдесь же подключим соответствующее свойство
+6- работу фракции (связь слайда с номером пропишем в свойствах слайдера в файле: src > js > files > sliders.js
