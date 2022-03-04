@@ -410,6 +410,7 @@
 			font-size: rem(10);
 			transform: rotate(-90deg);
 		}
+		// для не активной стрелочки
 		&:disabled {
 			color: rgba(0, 0, 0, 0.12);
 		}
@@ -442,6 +443,7 @@
 			background-color: $mainOrange;
 			color: #fff;
 		}
+		// при наведени появляется оранжевый круг
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $mainOrange;

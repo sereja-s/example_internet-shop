@@ -2,6 +2,8 @@
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
  */
+
+// Стили для ползунков фильтра цены
 .noUi-target,
 .noUi-target * {
 	-webkit-touch-callout: none;
@@ -79,10 +81,12 @@
 }
 /* Slider size and handle placement;
  */
+// полоска для ползунков
 .noUi-horizontal {
 	height: rem(2);
 	background-color: $mainOrange;
 }
+// рисуем полунки (круглые, чёрные) с указанием размеров и расположения на горизонтальной полоске
 .noUi-horizontal .noUi-handle {
 	width: rem(18);
 	height: rem(18);
@@ -118,6 +122,8 @@
 .noUi-connects {
 	border-radius: 3px;
 }
+
+// растояние на полоске между ползунками
 .noUi-connect {
 	background-color: $mainDarkColor;
 }
@@ -129,6 +135,8 @@
 .noUi-vertical .noUi-draggable {
 	cursor: ns-resize;
 }
+
+// на ползунках делаем границу (оранжевая)
 .noUi-handle {
 	border: 3px solid $mainOrange;
 	border-radius: 3px;

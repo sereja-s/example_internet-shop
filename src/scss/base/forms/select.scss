@@ -67,11 +67,11 @@
 		// Максимальная высота
 		max-height: 200px;
 		// Стили скроллбара
-		.simplebar-scrollbar {
+		/* .simplebar-scrollbar {
 			&::before {
 				//opacity: 1;
 			}
-		}
+		} */
 	}
 	// .select__option
 	&__option {
@@ -96,16 +96,16 @@
 		display: inline-flex;
 		align-items: center;
 	}
-	&__asset {
-	}
-	&__text {
-	}
+	/* &__asset {
+	} */
+	/* &__text {
+	} */
 
 	// Состояния селекта
 	&._select-open {
 		z-index: 5;
 	}
-	&._select-disabled {
+	/* &._select-disabled {
 	}
 	&._select-active {
 	}
@@ -114,7 +114,12 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
-	}
+	} */
+
+	//======================================================================================================================
+
+	// Пропишем свои (дополнительные) стили для панели выбора (select)
+
 	&_control {
 		.select__title {
 			border: 1px solid rgba(4, 4, 4, 0.3);
@@ -123,17 +128,19 @@
 		.select__value {
 			height: rem(40);
 			color: rgba(0, 0, 0, 0.5);
+			// пропишем стрелочку и позиционируем её
 			&::before {
 				font-size: rem(8);
 				@extend %ic;
 				content: "\e900";
-				margin-left: em(10, 8);			
+				margin-left: em(10, 8);
 			}
 		}
+		//при наведении на пункты выбора
 		.select__option {
 			color: rgba(0, 0, 0, 0.5);
-			@media (any-hover: hover){
-				&:hover{
+			@media (any-hover: hover) {
+				&:hover {
 					color: rgba(0, 0, 0, 1);
 				}
 			}

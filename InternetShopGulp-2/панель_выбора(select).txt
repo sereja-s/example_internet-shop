@@ -1,0 +1,18 @@
+1- в файле-html: 
+		<div class="catalog__control">
+			<!-- панель выбора -->
+			<select name="form[]" class="control">
+				<option value="1" selected>По популярности</option>
+				<option value="2">По цене</option>
+				<option value="3">По отзывам</option>
+				<option value="4">По рейтингу</option>
+			</select>
+		</div>
+2- в файле: src > js > app.js подключим
+			 /* Модуль работы с select. */
+				import './libs/select.js'
+3- в файле: src > scss > base > forms > forms.scss раскомментируем
+							// <SELECT>
+					// Снипет (HTML): sel
+					@import "select";
+4- в файле: src > scss > base > forms > select.scss пропишем свои (дополнительные) стили для панели выбора (select)					
